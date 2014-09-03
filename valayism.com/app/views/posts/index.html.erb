@@ -1,0 +1,7 @@
+<h2>Welcome to Valayism.com</h2>
+<hr />
+<% @posts.each do |post| %>
+	<h3><%= link_to post.title, post %></h3>
+	<%= post.content %>
+	<hr />
+<% end %>
