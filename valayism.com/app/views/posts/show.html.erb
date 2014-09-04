@@ -1,3 +1,9 @@
+<% content_for :title do %> <%=@post.title%><% end %>
 <h2><%= @post.title %></h2>
 <p><%= @post.content %></p>
 <small><%= @post.created_at %></small>
+<br>
+<%= link_to "tweet", "http://twitter.com/home?status=#{@post.title} #{post_url(@post)} " + "via @Valayism"%>
+<%= link_to "facebook", "http://www.facebook.com/sharer.php?u=#{post_url(@post)}" %>
+
+
