@@ -2,6 +2,7 @@
 <hr />
 <% @posts.each do |post| %>
 	<h3><%= link_to post.title, post %></h3>
-	<%= post.content %>
+	<%= post.content %><br>
+	<%= link_to "Share on Facebook", "http://www.facebook.com/sharer.php?u " + "/posts/#{post}" %>
 	<hr />
 <% end %>
