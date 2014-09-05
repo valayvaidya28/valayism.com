@@ -37,7 +37,7 @@ class PostsController < ApplicationController
 	def destroy
 	    @post = Post.find(params[:id])
         if @post.destroy
-            redirect_to posts_path, :notice=> "Your post has been deleted!"
+            redirect_to '/_dashboard', :notice=> "Your post has been deleted!"
         end 
 	end
 
@@ -46,6 +46,6 @@ class PostsController < ApplicationController
 	end
 
 	def post_params
-      	params.require(:post).permit(:title, :content)
+      	params.require(:post).permit(:title, :content, :photo)
     end
 end
