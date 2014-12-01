@@ -45,6 +45,11 @@ class PostsController < ApplicationController
 		@posts = Post.all
 	end
 
+	def upvote
+		Post.increment_counter(:score, params[:id])
+		redirect_to :controller=>'posts', :action => 'show', :id => params[:id]
+	end
+
 	def post_params
       	params.require(:post).permit(:title, :content, :photo)
     end

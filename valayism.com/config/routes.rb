@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   get '/_dashboard', to: 'posts#dashboard'
+  get '/upvote' => "posts#upvote"
   resources :posts
   # Example resource route with options:
   #   resources :products do

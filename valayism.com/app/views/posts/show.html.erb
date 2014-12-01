@@ -1,4 +1,5 @@
 <% content_for :title do %> <%=@post.title%><% end %>
+<%= link_to "Home", posts_path %>
 <h2><%= @post.title %></h2>
 <% if not @post.photo.blank? then %>
 	<%= image_tag @post.photo.url(:medium) %><br>
@@ -6,6 +7,7 @@
 <p><%= @post.content %></p>
 <small><%= @post.created_at %></small>
 <br>
+<%= link_to "Upvote", upvote_path(:id => @post.id) %> <%=@post.score%>
 <%= link_to "tweet", "http://twitter.com/home?status=#{@post.title} #{post_url(@post)} " + "via @Valayism"%>
 <%= link_to "facebook", "http://www.facebook.com/sharer.php?u=#{post_url(@post)}" %>
 

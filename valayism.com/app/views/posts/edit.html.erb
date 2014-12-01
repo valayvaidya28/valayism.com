@@ -1,7 +1,7 @@
 <% content_for :title do %>Edit post<% end %>
 <h1> Edit post </h1>
 
-<%= form_for @post, {} ,:html => {:multipart => true} do |f| %>
+<%= form_for @post do |f| %>
 <p>
 	<%= f.label :title %><br />
 	<%= f.text_field :title %>

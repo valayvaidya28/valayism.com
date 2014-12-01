@@ -1,4 +1,5 @@
 class Post < ActiveRecord::Base
+	has_and_belongs_to_many :categories, :joint_table => :posts_categories
 	self.inheritance_column = nil
 	validates :title, presence: true
 	validates :content, presence: true
