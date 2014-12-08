@@ -1,10 +1,12 @@
 class PostsController < ApplicationController
 	def index
 		@posts = Post.all
+		@categories = Category.all
 	end
 
 	def new
 		@post = Post.new
+		@categories = Category.all
 	end
 
 	def show
@@ -12,14 +14,22 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		@post = Post.new(post_params)
+		all_params = params
+		@post = Post.new(:title => all_params[:title], :photo => all_params[:photo], :content=> all_params[:content])
 		if @post.save
+			all_params.each do |key, value|
+				if key.start_with?("category") do
+					@post.categories << Category.find(key) if value
+				end
+			end
 			flash[:success] = "Post has been published."
-			redirect_to '/posts'
+			redirect_to and return '/posts'
+		end
 		else
 			render 'new'
 		end
 	end
+
 
 	def edit
 		@post = Post.find(params[:id])
