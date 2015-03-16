@@ -1,0 +1,5 @@
+<% @posts_with_categories.each do |post| %>
+	<h3><%= link_to post.title, post %></h3>
+	<%= post.content %><br>
+	<hr />
+<% end %>
