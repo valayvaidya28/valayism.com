@@ -1,6 +1,9 @@
 <% content_for :title do %> <%=@post.title%><% end %>
 <%= link_to "Home", posts_path %>
 <h2><%= @post.title %></h2>
+<% @post.categories.each do |c|%>
+	<%= c.category_name %>
+<% end -%>
 <% if not @post.photo.blank? then %>
 	<%= image_tag @post.photo.url(:medium) %><br>
 <% end %>

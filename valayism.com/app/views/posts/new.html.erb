@@ -2,7 +2,7 @@
 
 <%= form_tag(posts_path) do%>
 	<% @categories.each do |c|%>
-		<%= check_box_tag "#{c.id}", "#{c.category_name}"%> <%= c.category_name %><br>
+		<%= check_box_tag "category_#{c.id}", "#{c.category_name}"%> <%= c.category_name %><br>
 	<% end %>
 
 	<p>

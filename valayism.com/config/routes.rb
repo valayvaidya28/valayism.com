@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   #   resources :products
   get '/_dashboard', to: 'posts#dashboard'
   get '/upvote' => "posts#upvote"
+  get '/category/:name', to: 'posts#category_post', as: 'post_with_category'
   resources :posts
   # Example resource route with options:
   #   resources :products do

@@ -17,16 +17,17 @@ class PostsController < ApplicationController
 		all_params = params
 		@post = Post.new(:title => all_params[:title], :photo => all_params[:photo], :content=> all_params[:content])
 		if @post.save
+			logger.info(all_params)
 			all_params.each do |key, value|
-				if key.start_with?("category") do
-					@post.categories << Category.find(key) if value
+				if key.start_with?("category")
+					@post.categories << Category.find_by_category_name(value)
+					@post.save!
 				end
 			end
 			flash[:success] = "Post has been published."
 			redirect_to and return '/posts'
-		end
 		else
-			render 'new'
+		 	render 'new'
 		end
 	end
 
@@ -58,6 +59,11 @@ class PostsController < ApplicationController
 	def upvote
 		Post.increment_counter(:score, params[:id])
 		redirect_to :controller=>'posts', :action => 'show', :id => params[:id]
+	end
+
+	def category_post
+		@category = Category.find_by_category_name(params[:name])
+		@posts_with_categories = @category.posts
 	end
 
 	def post_params

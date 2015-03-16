@@ -1,6 +1,10 @@
 <% content_for :title do %>Home<% end %>
 <h2>Welcome to Valayism.com</h2>
 <hr />
+<% @categories.each do |c| %>
+	<%= link_to c.category_name, post_with_category_path(name: c.category_name) %><br>
+<% end %>
+<hr />
 <% @posts.each do |post| %>
 	<h3><%= link_to post.title, post %></h3>
 	<%= post.content %><br>
