@@ -13,9 +13,12 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  get '/_dashboard', to: 'posts#dashboard'
+  get '/dashboard', to: 'users#dashboard'
   get '/upvote' => "posts#upvote"
   get '/category/:name', to: 'posts#category_post', as: 'post_with_category'
+  get '/user/login', to: 'users#login', as: 'login'
+  post '/user/login', to: 'users#check_credentials', as: 'check_credentials'
+  post '/logout', to: 'users#logout', as: 'logout'
   resources :posts
   resources :categories
   # Example resource route with options:

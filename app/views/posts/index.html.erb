@@ -1,5 +1,8 @@
 <% content_for :title do %>Home<% end %>
 <h2>Welcome to Valayism.com</h2>
+<% if not session[:username].nil? %>
+	<%= link_to "Logout", logout_path, :method => "post" %>
+<% end %>
 <hr />
 <% @categories.each do |c| %>
 	<%= link_to c.category_name, post_with_category_path(name: c.category_name) %><br>

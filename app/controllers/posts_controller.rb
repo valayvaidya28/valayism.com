@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+
 	def index
 		@posts = Post.all
 		@categories = Category.all
@@ -7,26 +8,27 @@ class PostsController < ApplicationController
 	def new
 		@post = Post.new
 		@categories = Category.all
-		logger.info(@categories)
-		logger.info("+++++++++++++")
-		# respond_to do |format|
-		# 	format.js
-		# 	format.html { render 'new' }
-		# end
 	end
 
 	def show
 		@post = Post.find(params[:id])
+		@user_id = @post.user_id
+		@user = User.find_by_id(@user_id)
+		@username = @user.username
+		#logger.info("#{@username} +++++++++++++++++++++++++++++++++=====")
 	end
 
 	def create
 		all_params = params
+		@user = User.find_by_username(session[:username])
 		@post = Post.new(:title => all_params[:title], :photo => all_params[:photo], :content=> all_params[:content])
 		if @post.save
 			logger.info(all_params)
+			@user.posts << @post
 			all_params.each do |key, value|
 				if key.start_with?("category")
 					@post.categories << Category.find_by_category_name(value)
+					@user.posts << @post
 					@post.save!
 				end
 			end
@@ -56,10 +58,6 @@ class PostsController < ApplicationController
         if @post.destroy
             redirect_to '/_dashboard', :notice=> "Your post has been deleted!"
         end 
-	end
-
-	def dashboard
-		@posts = Post.all
 	end
 
 	def upvote

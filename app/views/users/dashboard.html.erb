@@ -1,7 +1,10 @@
 <% content_for :title do %>Dashboard<% end %>
 <%= link_to "New blog", new_post_path %>
 <%= link_to "Home", posts_path %>
+<%= session[:username] %>
+<%= link_to "Logout", logout_path, :method => "post" %>
 <br>
+<hr>
 <% @posts.each do |post| %>
 	<%= link_to post.title, post %><br>
 	<%= link_to "Edit", edit_post_path(post) %>
