@@ -1,4 +1,0 @@
-valayism.com
-============
-
-Personal blog

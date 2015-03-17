@@ -1,0 +1,820 @@
+Script started on Friday 05 September 2014 12:44:59 PM IST
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ script/generate pp[Kapercl ip
+bash: script/generate: No such file or directory
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ script.[K/g
+bash: script/g: No such file or directory
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ ls script
+ls: cannot access script: No such file or directory
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ rails g paperclip
+Usage:
+  rails generate paperclip NAME attachment_one attachment_two attachment_three ... [options]
+
+Options:
+  [--skip-namespace], [--no-skip-namespace]  # Skip namespace (affects only isolated applications)
+
+Runtime options:
+  -f, [--force]                    # Overwrite files that already exist
+  -p, [--pretend], [--no-pretend]  # Run but do not make any changes
+  -q, [--quiet], [--no-quiet]      # Suppress status output
+  -s, [--skip], [--no-skip]        # Skip files that already exist
+
+Create a migration to add paperclip-specific fields to your model. The NAME argument is the name of your model, and the following arguments are the name of the attachments
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ rails g pae[Kperclip photo [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[Kost  post[K[K[Khoto
+[1m[32m      create[0m  db/migrate/20140905071627_add_attachment_photo_to_posts.rb
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ rake db:migrate
+== 20140905071627 AddAttachmentPhotoToPosts: migrating ========================
+-- change_table(:posts)
+   -> 0.0021s
+== 20140905071627 AddAttachmentPhotoToPosts: migrated (0.0022s) ===============
+
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ rails c
+Loading development environment (Rails 4.1.1)
+2.1.0 :001 > Post(n[K[K.new()
+ => #<Post id: nil, title: "", content: "", created_at: nil, updated_at: nil, photo_file_name: nil, photo_content_type: nil, photo_file_size: nil, photo_updated_at: nil> 
+2.1.0 :002 > ^C
+2.1.0 :002 > exit
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ rails s[Kc
+Loading development environment (Rails 4.1.1)
+2.1.0 :001 > Post.all
+  [1m[36mPost Load (1.6ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+ => #<ActiveRecord::Relation [#<Post id: 1, title: "hi", content: "what's up? Hi", created_at: "2014-09-03 19:21:36", updated_at: "2014-09-04 07:41:37", photo_file_name: nil, photo_content_type: nil, photo_file_size: nil, photo_updated_at: nil>, #<Post id: 3, title: "va", content: "asdf", created_at: "2014-09-04 07:29:30", updated_at: "2014-09-04 07:29:30", photo_file_name: nil, photo_content_type: nil, photo_file_size: nil, photo_updated_at: nil>, #<Post id: 4, title: "va", content: "asdf", created_at: "2014-09-04 07:29:44", updated_at: "2014-09-04 07:29:44", photo_file_name: nil, photo_content_type: nil, photo_file_size: nil, photo_updated_at: nil>, #<Post id: 5, title: "LOL", content: "Ya I know", created_at: "2014-09-04 12:22:47", updated_at: "2014-09-04 12:22:47", photo_file_name: nil, photo_content_type: nil, photo_file_size: nil, photo_updated_at: nil>, #<Post id: 6, title: "aklsdfj asdfljlkafd", content: "vaksldjfkljlakdsfjlskadf", created_at: "2014-09-04 13:21:41", updated_at: "2014-09-04 13:21:41", photo_file_name: nil, photo_content_type: nil, photo_file_size: nil, photo_updated_at: nil>, #<Post id: 7, title: "Hi", content: "valay", created_at: "2014-09-05 06:50:33", updated_at: "2014-09-05 06:50:33", photo_file_name: nil, photo_content_type: nil, photo_file_size: nil, photo_updated_at: nil>, #<Post id: 8, title: "Photo testing", content: "Hello there. Here is the photo.", created_at: "2014-09-05 07:27:03", updated_at: "2014-09-05 07:27:03", photo_file_name: nil, photo_content_type: nil, photo_file_size: nil, photo_updated_at: nil>]> 
+2.1.0 :002 > Post.all
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts"
+ => #<ActiveRecord::Relation [#<Post id: 1, title: "hi", content: "what's up? Hi", created_at: "2014-09-03 19:21:36", updated_at: "2014-09-04 07:41:37", photo_file_name: nil, photo_content_type: nil, photo_file_size: nil, photo_updated_at: nil>, #<Post id: 3, title: "va", content: "asdf", created_at: "2014-09-04 07:29:30", updated_at: "2014-09-04 07:29:30", photo_file_name: nil, photo_content_type: nil, photo_file_size: nil, photo_updated_at: nil>, #<Post id: 4, title: "va", content: "asdf", created_at: "2014-09-04 07:29:44", updated_at: "2014-09-04 07:29:44", photo_file_name: nil, photo_content_type: nil, photo_file_size: nil, photo_updated_at: nil>, #<Post id: 5, title: "LOL", content: "Ya I know", created_at: "2014-09-04 12:22:47", updated_at: "2014-09-04 12:22:47", photo_file_name: nil, photo_content_type: nil, photo_file_size: nil, photo_updated_at: nil>, #<Post id: 6, title: "aklsdfj asdfljlkafd", content: "vaksldjfkljlakdsfjlskadf", created_at: "2014-09-04 13:21:41", updated_at: "2014-09-04 13:21:41", photo_file_name: nil, photo_content_type: nil, photo_file_size: nil, photo_updated_at: nil>, #<Post id: 7, title: "Hi", content: "valay", created_at: "2014-09-05 06:50:33", updated_at: "2014-09-05 06:50:33", photo_file_name: nil, photo_content_type: nil, photo_file_size: nil, photo_updated_at: nil>, #<Post id: 8, title: "Photo testing", content: "Hello there. Here is the photo.", created_at: "2014-09-05 07:27:03", updated_at: "2014-09-05 07:27:03", photo_file_name: nil, photo_content_type: nil, photo_file_size: nil, photo_updated_at: nil>, #<Post id: 9, title: "Photo 2", content: "Photo Photo Photo", created_at: "2014-09-05 07:35:14", updated_at: "2014-09-05 07:35:14", photo_file_name: nil, photo_content_type: nil, photo_file_size: nil, photo_updated_at: nil>, #<Post id: 10, title: "Photo 3", content: "Photo sharing testing", created_at: "2014-09-05 07:37:02", updated_at: "2014-09-05 07:37:02", photo_file_name: nil, photo_content_type: nil, photo_file_size: nil, photo_updated_at: nil>]> 
+2.1.0 :003 > ^C
+2.1.0 :003 > exit
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ clear
+[H[2J]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ r[Kgit dst[K[K[Kstatus
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   Gemfile[m
+	[31mmodified:   Gemfile.lock[m
+	[31mmodified:   app/assets/stylesheets/application.css[m
+	[31mmodified:   app/controllers/posts_controller.rb[m
+	[31mmodified:   app/models/post.rb[m
+	[31mmodified:   app/views/posts/dashboard.html.erb[m
+	[31mmodified:   app/views/posts/edit.html.erb[m
+	[31mmodified:   app/views/posts/index.html.erb[m
+	[31mmodified:   app/views/posts/new.html.erb[m
+	[31mmodified:   app/views/posts/show.html.erb[m
+	[31mmodified:   db/schema.rb[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mapp/assets/javascripts/posts.js.coffee[m
+	[31mapp/assets/stylesheets/posts.css.scss[m
+	[31mapp/helpers/posts_helper.rb[m
+	[31mdb/migrate/20140905071627_add_attachment_photo_to_posts.rb[m
+	[31mpublic/system/[m
+	[31mtest/controllers/posts_controller_test.rb[m
+	[31mtest/fixtures/posts.yml[m
+	[31mtest/helpers/posts_helper_test.rb[m
+	[31mtest/models/post_test.rb[m
+	[31mtypescript[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ git diff Gemfile
+[?1h=[1mdiff --git a/valayism.com/Gemfile b/valayism.com/Gemfile[m[m
+[1mindex 21fc07e..cbf3dd3 100644[m[m
+[1m--- a/valayism.com/Gemfile[m[m
+[1m+++ b/valayism.com/Gemfile[m[m
+[36m@@ -7,6 +7,7 @@[m [mgem 'rails', '4.1.1'[m[m
+ gem 'sqlite3'[m[m
+ # Use SCSS for stylesheets[m[m
+ gem 'sass-rails', '~> 4.0.3'[m[m
+[32m+[m[32mgem "paperclip", "~> 4.2"[m[m
+ # Use Uglifier as compressor for JavaScript assets[m[m
+ gem 'uglifier', '>= 1.3.0'[m[m
+ # Use CoffeeScript for .js.coffee assets and views[m[m
+[K[?1l>]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ git def[K[K[K[K diff Gemfile.lock
+[?1h=[1mdiff --git a/valayism.com/Gemfile.lock b/valayism.com/Gemfile.lock[m[m
+[1mindex d7f196b..510a6f2 100644[m[m
+[1m--- a/valayism.com/Gemfile.lock[m[m
+[1m+++ b/valayism.com/Gemfile.lock[m[m
+[36m@@ -29,6 +29,10 @@[m [mGEM[m[m
+       tzinfo (~> 1.1)[m[m
+     arel (5.0.1.20140414130214)[m[m
+     builder (3.2.2)[m[m
+[32m+[m[32m    climate_control (0.0.3)[m[m
+[32m+[m[32m      activesupport (>= 3.0)[m[m
+[32m+[m[32m    cocaine (0.5.4)[m[m
+[32m+[m[32m      climate_control (>= 0.0.3, < 1.0)[m[m
+     coffee-rails (4.0.1)[m[m
+       coffee-script (>= 2.2.0)[m[m
+       railties (>= 4.0.0, < 5.0)[m[m
+[36m@@ -53,6 +57,11 @@[m [mGEM[m[m
+     mime-types (1.25.1)[m[m
+     minitest (5.4.1)[m[m
+     multi_json (1.10.1)[m[m
+[32m+[m[32m    paperclip (4.2.0)[m[m
+[32m+[m[32m      activemodel (>= 3.0.0)[m[m
+[32m+[m[32m      activesupport (>= 3.0.0)[m[m
+[32m+[m[32m      cocaine (~> 0.5.3)[m[m
+[32m+[m[32m      mime-types[m[m
+     polyglot (0.3.5)[m[m
+     rack (1.5.2)[m[m
+     rack-test (0.6.2)[m[m
+[36m@@ -116,6 +125,7 @@[m [mDEPENDENCIES[m[m
+   coffee-rails (~> 4.0.0)[m[m
+   jbuilder (~> 2.0)[m[m
+   jquery-rails[m[m
+[32m+[m[32m  paperclip (~> 4.2)[m[m
+   rails (= 4.1.1)[m[m
+   sass-rails (~> 4.0.3)[m[m
+   sdoc (~> 0.4.0)[m[m
+[K[?1l>]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ 
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ 
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ 
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ clear
+[H[2J]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   Gemfile[m
+	[31mmodified:   Gemfile.lock[m
+	[31mmodified:   app/assets/stylesheets/application.css[m
+	[31mmodified:   app/controllers/posts_controller.rb[m
+	[31mmodified:   app/models/post.rb[m
+	[31mmodified:   app/views/posts/dashboard.html.erb[m
+	[31mmodified:   app/views/posts/edit.html.erb[m
+	[31mmodified:   app/views/posts/index.html.erb[m
+	[31mmodified:   app/views/posts/new.html.erb[m
+	[31mmodified:   app/views/posts/show.html.erb[m
+	[31mmodified:   db/schema.rb[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mapp/assets/javascripts/posts.js.coffee[m
+	[31mapp/assets/stylesheets/posts.css.scss[m
+	[31mapp/helpers/posts_helper.rb[m
+	[31mdb/migrate/20140905071627_add_attachment_photo_to_posts.rb[m
+	[31mpublic/system/[m
+	[31mtest/controllers/posts_controller_test.rb[m
+	[31mtest/fixtures/posts.yml[m
+	[31mtest/helpers/posts_helper_test.rb[m
+	[31mtest/models/post_test.rb[m
+	[31mtypescript[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ git[K[K[Kgit apply asse[K[K[K[K[K[K[K[K[K[Kid[K[Kdiff app/ase[Ksets/sy[Ktylesheets/application.css
+[?1h=[1mdiff --git a/valayism.com/app/assets/stylesheets/application.css b/valayism.com/app/assets/stylesheets/application.css[m[m
+[1mindex a443db3..2e6e7ab 100644[m[m
+[1m--- a/valayism.com/app/assets/stylesheets/application.css[m[m
+[1m+++ b/valayism.com/app/assets/stylesheets/application.css[m[m
+[36m@@ -12,4 +12,4 @@[m[m
+  *[m[m
+  *= require_tree .[m[m
+  *= require_self[m[m
+[31m- */[m[m
+[32m+[m[32m */[m[m
+\ No newline at end of file[m[m
+[K[?1l>]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ d[Kgit add[K[K[Kg[Kdiff[K[K[K[K[K[K[K[Kgit diff db/schema.rb
+[?1h=[1mdiff --git a/valayism.com/db/schema.rb b/valayism.com/db/schema.rb[m[m
+[1mindex bcc0b27..e3f6fb7 100644[m[m
+[1m--- a/valayism.com/db/schema.rb[m[m
+[1m+++ b/valayism.com/db/schema.rb[m[m
+[36m@@ -11,13 +11,17 @@[m[m
+ #[m[m
+ # It's strongly recommended that you check this file into your version control system.[m[m
+ [m[m
+[31m-ActiveRecord::Schema.define(version: 20140903184316) do[m[m
+[32m+[m[32mActiveRecord::Schema.define(version: 20140905071627) do[m[m
+ [m[m
+   create_table "posts", force: true do |t|[m[m
+[31m-    t.string   "title",                  default: "", null: false[m[m
+[31m-    t.text     "content",    limit: 255, default: "", null: false[m[m
+[32m+[m[32m    t.string   "title",                          default: "", null: false[m[m
+[32m+[m[32m    t.text     "content",            limit: 255, default: "", null: false[m[m
+     t.datetime "created_at"[m[m
+     t.datetime "updated_at"[m[m
+[32m+[m[32m    t.string   "photo_file_name"[m[m
+[32m+[m[32m    t.string   "photo_content_type"[m[m
+[32m+[m[32m    t.integer  "photo_file_size"[m[m
+[32m+[m[32m    t.datetime "photo_updated_at"[m[m
+   end[m[m
+ [m[m
+ end[m[m
+[K[?1l>]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ gt[Kit status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   Gemfile[m
+	[31mmodified:   Gemfile.lock[m
+	[31mmodified:   app/assets/stylesheets/application.css[m
+	[31mmodified:   app/controllers/posts_controller.rb[m
+	[31mmodified:   app/models/post.rb[m
+	[31mmodified:   app/views/posts/dashboard.html.erb[m
+	[31mmodified:   app/views/posts/edit.html.erb[m
+	[31mmodified:   app/views/posts/index.html.erb[m
+	[31mmodified:   app/views/posts/new.html.erb[m
+	[31mmodified:   app/views/posts/show.html.erb[m
+	[31mmodified:   db/schema.rb[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mapp/assets/javascripts/posts.js.coffee[m
+	[31mapp/assets/stylesheets/posts.css.scss[m
+	[31mapp/helpers/posts_helper.rb[m
+	[31mdb/migrate/20140905071627_add_attachment_photo_to_posts.rb[m
+	[31mpublic/system/[m
+	[31mtest/controllers/posts_controller_test.rb[m
+	[31mtest/fixtures/posts.yml[m
+	[31mtest/helpers/posts_helper_test.rb[m
+	[31mtest/models/post_test.rb[m
+	[31mtypescript[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ git diff [Kty[K[K typescript
+[?1h=[K[?1l>]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ d[Kgit status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   Gemfile[m
+	[31mmodified:   Gemfile.lock[m
+	[31mmodified:   app/assets/stylesheets/application.css[m
+	[31mmodified:   app/controllers/posts_controller.rb[m
+	[31mmodified:   app/models/post.rb[m
+	[31mmodified:   app/views/posts/dashboard.html.erb[m
+	[31mmodified:   app/views/posts/edit.html.erb[m
+	[31mmodified:   app/views/posts/index.html.erb[m
+	[31mmodified:   app/views/posts/new.html.erb[m
+	[31mmodified:   app/views/posts/show.html.erb[m
+	[31mmodified:   db/schema.rb[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mapp/assets/javascripts/posts.js.coffee[m
+	[31mapp/assets/stylesheets/posts.css.scss[m
+	[31mapp/helpers/posts_helper.rb[m
+	[31mdb/migrate/20140905071627_add_attachment_photo_to_posts.rb[m
+	[31mpublic/system/[m
+	[31mtest/controllers/posts_controller_test.rb[m
+	[31mtest/fixtures/posts.yml[m
+	[31mtest/helpers/posts_helper_test.rb[m
+	[31mtest/models/post_test.rb[m
+	[31mtypescript[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ git diff public/system/
+[?1h=[K[?1l>]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ git status [K [K[K[K[K[K[K[Kstatus [K[K[K[K[K[K[K[K add Gemfile
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ git add Gemfile.lock 
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ G[Kgit add app[Kp/controllers/posts_controller.rb 
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ git add app/models/post.rb 
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ git add app/views/posts/dashboard.html.erb 
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ git add app/views/posts/dashboard.html.erb [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kedit.html.erb 
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ git add app/views/posts/index.html.erb 
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ git add app/views/posts/index.html.erb [K[K[K[K[K[K[K[K[K[K[K[K[K[K[Knew.html.erb 
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ git add app/views/posts/new.html.erb [K[K[K[K[K[K[K[K[K[K[K[K[Kshwo[K[Kow.html.erb 
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ git staus[K[Ktus
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	[32mmodified:   Gemfile[m
+	[32mmodified:   Gemfile.lock[m
+	[32mmodified:   app/controllers/posts_controller.rb[m
+	[32mmodified:   app/models/post.rb[m
+	[32mmodified:   app/views/posts/dashboard.html.erb[m
+	[32mmodified:   app/views/posts/edit.html.erb[m
+	[32mmodified:   app/views/posts/index.html.erb[m
+	[32mmodified:   app/views/posts/new.html.erb[m
+	[32mmodified:   app/views/posts/show.html.erb[m
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   app/assets/stylesheets/application.css[m
+	[31mmodified:   db/schema.rb[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mapp/assets/javascripts/posts.js.coffee[m
+	[31mapp/assets/stylesheets/posts.css.scss[m
+	[31mapp/helpers/posts_helper.rb[m
+	[31mdb/migrate/20140905071627_add_attachment_photo_to_posts.rb[m
+	[31mpublic/system/[m
+	[31mtest/controllers/posts_controller_test.rb[m
+	[31mtest/fixtures/posts.yml[m
+	[31mtest/helpers/posts_helper_test.rb[m
+	[31mtest/models/post_test.rb[m
+	[31mtypescript[m
+
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ git add db/migrate/20140905071627_add_attachment_photo_to_posts.rb 
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	[32mmodified:   Gemfile[m
+	[32mmodified:   Gemfile.lock[m
+	[32mmodified:   app/controllers/posts_controller.rb[m
+	[32mmodified:   app/models/post.rb[m
+	[32mmodified:   app/views/posts/dashboard.html.erb[m
+	[32mmodified:   app/views/posts/edit.html.erb[m
+	[32mmodified:   app/views/posts/index.html.erb[m
+	[32mmodified:   app/views/posts/new.html.erb[m
+	[32mmodified:   app/views/posts/show.html.erb[m
+	[32mnew file:   db/migrate/20140905071627_add_attachment_photo_to_posts.rb[m
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   app/assets/stylesheets/application.css[m
+	[31mmodified:   db/schema.rb[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mapp/assets/javascripts/posts.js.coffee[m
+	[31mapp/assets/stylesheets/posts.css.scss[m
+	[31mapp/helpers/posts_helper.rb[m
+	[31mpublic/system/[m
+	[31mtest/controllers/posts_controller_test.rb[m
+	[31mtest/fixtures/posts.yml[m
+	[31mtest/helpers/posts_helper_test.rb[m
+	[31mtest/models/post_test.rb[m
+	[31mtypescript[m
+
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ git ad[K[Kcmm[K[Kommit -m "Add photo att[K[K[Kattribute to the post and curst[K[K[Kstomize size of the photo."
+[master b63c005] Add photo attribute to the post and customize size of the photo.
+ 10 files changed, 40 insertions(+), 4 deletions(-)
+ create mode 100644 valayism.com/db/migrate/20140905071627_add_attachment_photo_to_posts.rb
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ git s[Kpush
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+In Git 2.0, Git will default to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': valayvaidya28
+Password for 'https://valayvaidya28@github.com': 
+Counting objects: 38, done.
+Delta compression using up to 4 threads.
+Compressing objects:   5% (1/20)   Compressing objects:  10% (2/20)   Compressing objects:  15% (3/20)   Compressing objects:  20% (4/20)   Compressing objects:  25% (5/20)   Compressing objects:  30% (6/20)   Compressing objects:  35% (7/20)   Compressing objects:  40% (8/20)   Compressing objects:  45% (9/20)   Compressing objects:  50% (10/20)   Compressing objects:  55% (11/20)   Compressing objects:  60% (12/20)   Compressing objects:  65% (13/20)   Compressing objects:  70% (14/20)   Compressing objects:  75% (15/20)   Compressing objects:  80% (16/20)   Compressing objects:  85% (17/20)   Compressing objects:  90% (18/20)   Compressing objects:  95% (19/20)   Compressing objects: 100% (20/20)   Compressing objects: 100% (20/20), done.
+Writing objects:   5% (1/20)   Writing objects:  10% (2/20)   Writing objects:  15% (3/20)   Writing objects:  20% (4/20)   Writing objects:  25% (5/20)   Writing objects:  30% (6/20)   Writing objects:  35% (7/20)   Writing objects:  40% (8/20)   Writing objects:  45% (9/20)   Writing objects:  50% (10/20)   Writing objects:  55% (11/20)   Writing objects:  60% (12/20)   Writing objects:  65% (13/20)   Writing objects:  70% (14/20)   Writing objects:  75% (15/20)   Writing objects:  80% (16/20)   Writing objects:  85% (17/20)   Writing objects:  90% (18/20)   Writing objects:  95% (19/20)   Writing objects: 100% (20/20)   Writing objects: 100% (20/20), 2.33 KiB | 0 bytes/s, done.
+Total 20 (delta 12), reused 0 (delta 0)
+To https://github.com/valayvaidya28/valayism.com.git
+   f8034eb..b63c005  master -> master
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ git model[K[K[K[K[K[K[K[K[Kget [K[K[K[Kg[Kdef[K[K[Krialss[K[K[K[K[Kails g model categories[K[K[Ky
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20140905100539_create_categories.rb
+[1m[32m      create[0m    app/models/category.rb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/models/category_test.rb
+[1m[32m      create[0m      test/fixtures/categories.yml
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ rails g migration categorisation o[Kpost_id:integer category)[K_id:integer
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20140905101135_categorisation.rb
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ rails g migration categorisation
+[1m[37m      invoke[0m  active_record
+[1m[34m   identical[0m    db/migrate/20140905101135_categorisation.rb
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ git [K[K[K[Krails g migration categorisation[C[1P[1@d[1@e[1@s[1@t[1@o[1@y[1P[1P[1@r[1@o[1@y
+[1m[37m      invoke[0m  active_record
+[1m[31m      remove[0m    db/migrate/20140905101135_categorisation.rb
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ rails destroy migration categorisation[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K g ma=[K[Kodel categorisation
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20140905101610_create_categorisations.rb
+[1m[32m      create[0m    app/models/categorisation.rb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/models/categorisation_test.rb
+[1m[32m      create[0m      test/fixtures/categorisations.yml
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ rails c
+kLoading development environment (Rails 4.1.1)
+2.1.0 :001 > k[KPost.al[K[Kfirst
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts"   ORDER BY "posts"."id" ASC LIMIT 1[0m
+ => #<Post id: 12, title: "Photo 5 Mudu", content: "Photo 5", created_at: "2014-09-05 07:41:20", updated_at: "2014-09-05 07:41:20", photo_file_name: "240801_1348657451933_6449664_o.jpg", photo_content_type: "image/jpeg", photo_file_size: 236317, photo_updated_at: "2014-09-05 07:41:19"> 
+2.1.0 :002 > Post.category_id
+NoMethodError: undefined method `category_id' for #<Class:0x00000002b87548>
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activerecord-4.1.1/lib/active_record/dynamic_matchers.rb:26:in `method_missing'
+	from (irb):2
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/console.rb:90:in `start'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/console.rb:9:in `start'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:69:in `console'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `require'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `block in require'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `require'
+	from /home/valayism/rubytrial/valayism.com/valayism.com/bin/rails:8:in `<top (required)>'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `block in load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/commands/rails.rb:6:in `call'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/command_wrapper.rb:38:in `call'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:180:in `block in serve'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:153:in `fork'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:153:in `serve'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:128:in `block in run'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:122:in `loop'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:122:in `run'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /home/valayism/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /home/valayism/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'2.1.0 :003 > 
+2.1.0 :004 >   
+2.1.0 :005 >   
+2.1.0 :006 >   Post.category
+NoMethodError: undefined method `category' for #<Class:0x00000002b87548>
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activerecord-4.1.1/lib/active_record/dynamic_matchers.rb:26:in `method_missing'
+	from (irb):6
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/console.rb:90:in `start'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/console.rb:9:in `start'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:69:in `console'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `require'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `block in require'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `require'
+	from /home/valayism/rubytrial/valayism.com/valayism.com/bin/rails:8:in `<top (required)>'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `block in load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/commands/rails.rb:6:in `call'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/command_wrapper.rb:38:in `call'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:180:in `block in serve'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:153:in `fork'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:153:in `serve'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:128:in `block in run'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:122:in `loop'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:122:in `run'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /home/valayism/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /home/valayism/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'2.1.0 :007 > ^C
+2.1.0 :007 > exit
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ rake db:migrate
+== 20140905100539 CreateCategories: migrating =================================
+-- create_table(:categories)
+   -> 0.0014s
+== 20140905100539 CreateCategories: migrated (0.0015s) ========================
+
+== 20140905101610 CreateCategorisations: migrating ============================
+-- create_table(:categorisations)
+   -> 0.0027s
+== 20140905101610 CreateCategorisations: migrated (0.0028s) ===================
+
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ rails c
+Loading development environment (Rails 4.1.1)
+2.1.0 :001 > exitPost.category
+NoMethodError: undefined method `category' for Post (call 'Post.connection' to establish a connection):Class
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activerecord-4.1.1/lib/active_record/dynamic_matchers.rb:26:in `method_missing'
+	from (irb):1
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/console.rb:90:in `start'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/console.rb:9:in `start'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:69:in `console'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `require'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `block in require'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `require'
+	from /home/valayism/rubytrial/valayism.com/valayism.com/bin/rails:8:in `<top (required)>'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `block in load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/commands/rails.rb:6:in `call'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/command_wrapper.rb:38:in `call'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:180:in `block in serve'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:153:in `fork'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:153:in `serve'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:128:in `block in run'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:122:in `loop'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:122:in `run'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /home/valayism/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /home/valayism/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'2.1.0 :002 > Post.categoryexit[KPost.category_id[6Pfirst
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts"   ORDER BY "posts"."id" ASC LIMIT 1[0m
+ => #<Post id: 12, title: "Photo 5 Mudu", content: "Photo 5", created_at: "2014-09-05 07:41:20", updated_at: "2014-09-05 07:41:20", photo_file_name: "240801_1348657451933_6449664_o.jpg", photo_content_type: "image/jpeg", photo_file_size: 236317, photo_updated_at: "2014-09-05 07:41:19"> 
+2.1.0 :003 > Post.first[K[K[K[K[Kcateo[Kgory_id
+NoMethodError: undefined method `category_id' for #<Class:0x00000001aeef88>
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activerecord-4.1.1/lib/active_record/dynamic_matchers.rb:26:in `method_missing'
+	from (irb):3
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/console.rb:90:in `start'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/console.rb:9:in `start'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:69:in `console'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `require'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `block in require'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `require'
+	from /home/valayism/rubytrial/valayism.com/valayism.com/bin/rails:8:in `<top (required)>'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `block in load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/commands/rails.rb:6:in `call'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/command_wrapper.rb:38:in `call'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:180:in `block in serve'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:153:in `fork'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:153:in `serve'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:128:in `block in run'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:122:in `loop'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:122:in `run'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /home/valayism/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /home/valayism/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'2.1.0 :004 > 
+2.1.0 :005 >   
+2.1.0 :006 >   cat[K[K[KCategory.all
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+ => #<ActiveRecord::Relation []> 
+2.1.0 :007 > Category[Ky.new
+ => #<Category id: nil, category_name: nil, created_at: nil, updated_at: nil> 
+2.1.0 :008 > Category nea[K[Km[Kame =[K[K[K[K[K[Kcame [K[K[K[K[Kname = ""[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcategory = Category.name[K[K[K[Knew(category_name= "[K[K"Ficti[K[K[K[Kiction")
+ArgumentError: When assigning attributes, you must pass a hash as an argument.
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activerecord-4.1.1/lib/active_record/attribute_assignment.rb:16:in `assign_attributes'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activerecord-4.1.1/lib/active_record/core.rb:452:in `init_attributes'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activerecord-4.1.1/lib/active_record/core.rb:198:in `initialize'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activerecord-4.1.1/lib/active_record/inheritance.rb:30:in `new'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activerecord-4.1.1/lib/active_record/inheritance.rb:30:in `new'
+	from (irb):8
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/console.rb:90:in `start'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/console.rb:9:in `start'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:69:in `console'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `require'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `block in require'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `require'
+	from /home/valayism/rubytrial/valayism.com/valayism.com/bin/rails:8:in `<top (required)>'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `block in load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `load'
+	from /home/valayism/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /home/valayism/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'2.1.0 :009 > category = Category.new(category_name="Fiction")[C[C[C[1P"Fiction"):"Fiction")
+ => #<Category id: nil, category_name: "Fiction", created_at: nil, updated_at: nil> 
+2.1.0 :010 > category.save
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "categories" ("category_name", "created_at", "updated_at") VALUES (?, ?, ?)  [["category_name", "Fiction"], ["created_at", "2014-09-05 10:24:15.752600"], ["updated_at", "2014-09-05 10:24:15.752600"]]
+  [1m[36m (160.2ms)[0m  [1mcommit transaction[0m
+ => true 
+2.1.0 :011 > git[K[K[Kca[K[KCategory.all
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories".* FROM "categories"
+ => #<ActiveRecord::Relation [#<Category id: 1, category_name: "Fiction", created_at: "2014-09-05 10:24:15", updated_at: "2014-09-05 10:24:15">]> 
+2.1.0 :012 > Category_c[K[K.C[Kcategory_id(1)
+NoMethodError: undefined method `category_id' for #<Class:0x0000000440e4b8>
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activerecord-4.1.1/lib/active_record/dynamic_matchers.rb:26:in `method_missing'
+	from (irb):12
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/console.rb:90:in `start'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/console.rb:9:in `start'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:69:in `console'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `require'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `block in require'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `require'
+	from /home/valayism/rubytrial/valayism.com/valayism.com/bin/rails:8:in `<top (required)>'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `block in load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/commands/rails.rb:6:in `call'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/command_wrapper.rb:38:in `call'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:180:in `block in serve'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:153:in `fork'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:153:in `serve'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:128:in `block in run'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:122:in `loop'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:122:in `run'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /home/valayism/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /home/valayism/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'2.1.0 :013 > Category.id(1)
+NoMethodError: undefined method `id' for #<Class:0x0000000440e4b8>
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activerecord-4.1.1/lib/active_record/dynamic_matchers.rb:26:in `method_missing'
+	from (irb):13
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/console.rb:90:in `start'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/console.rb:9:in `start'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:69:in `console'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `require'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `block in require'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `require'
+	from /home/valayism/rubytrial/valayism.com/valayism.com/bin/rails:8:in `<top (required)>'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `block in load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/commands/rails.rb:6:in `call'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/command_wrapper.rb:38:in `call'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:180:in `block in serve'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:153:in `fork'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:153:in `serve'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:128:in `block in run'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:122:in `loop'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:122:in `run'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /home/valayism/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /home/valayism/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'2.1.0 :014 > C[KC[Kclear
+NameError: undefined local variable or method `clear' for main:Object
+	from (irb):14
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/console.rb:90:in `start'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/console.rb:9:in `start'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:69:in `console'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `require'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `block in require'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `require'
+	from /home/valayism/rubytrial/valayism.com/valayism.com/bin/rails:8:in `<top (required)>'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `block in load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/commands/rails.rb:6:in `call'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/command_wrapper.rb:38:in `call'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:180:in `block in serve'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:153:in `fork'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:153:in `serve'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:128:in `block in run'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:122:in `loop'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:122:in `run'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /home/valayism/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /home/valayism/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'2.1.0 :015 > exi
+NameError: undefined local variable or method `exi' for main:Object
+	from (irb):15
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/console.rb:90:in `start'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/console.rb:9:in `start'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:69:in `console'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `require'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `block in require'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `require'
+	from /home/valayism/rubytrial/valayism.com/valayism.com/bin/rails:8:in `<top (required)>'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `block in load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/commands/rails.rb:6:in `call'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/command_wrapper.rb:38:in `call'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:180:in `block in serve'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:153:in `fork'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:153:in `serve'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:128:in `block in run'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:122:in `loop'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:122:in `run'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /home/valayism/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /home/valayism/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'2.1.0 :016 > exit
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ clear
+[H[2J]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ V[KCategory.id
+Category.id: command not found
+]0;valayism@valayism: ~/rubytrial/valayism.com/valayism.comvalayism@valayism:~/rubytrial/valayism.com/valayism.com$ rails c
+Loading development environment (Rails 4.1.1)
+2.1.0 :001 > Category.id
+NoMethodError: undefined method `id' for Category (call 'Category.connection' to establish a connection):Class
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activerecord-4.1.1/lib/active_record/dynamic_matchers.rb:26:in `method_missing'
+	from (irb):1
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/console.rb:90:in `start'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/console.rb:9:in `start'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:69:in `console'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `require'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `block in require'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `require'
+	from /home/valayism/rubytrial/valayism.com/valayism.com/bin/rails:8:in `<top (required)>'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `block in load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/commands/rails.rb:6:in `call'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/command_wrapper.rb:38:in `call'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:180:in `block in serve'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:153:in `fork'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:153:in `serve'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:128:in `block in run'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:122:in `loop'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:122:in `run'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /home/valayism/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /home/valayism/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'2.1.0 :002 > Category.id[7Pexit[KclearCategory.id(1)category_id(1)all[Kcategory.save = Category.new(category_name:"Fiction")="Fiction")
+ArgumentError: When assigning attributes, you must pass a hash as an argument.
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activerecord-4.1.1/lib/active_record/attribute_assignment.rb:16:in `assign_attributes'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activerecord-4.1.1/lib/active_record/core.rb:452:in `init_attributes'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activerecord-4.1.1/lib/active_record/core.rb:198:in `initialize'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activerecord-4.1.1/lib/active_record/inheritance.rb:30:in `new'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activerecord-4.1.1/lib/active_record/inheritance.rb:30:in `new'
+	from (irb):2
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/console.rb:90:in `start'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/console.rb:9:in `start'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:69:in `console'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `require'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `block in require'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `require'
+	from /home/valayism/rubytrial/valayism.com/valayism.com/bin/rails:8:in `<top (required)>'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `block in load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `load'
+	from /home/valayism/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /home/valayism/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'2.1.0 :003 > category = Category.new(category_name="Fiction")[C[C[C[C[C[C[C[C[C[C[C[C[CCategory.id[K[7PexitCategory.id[7PexitCategory.idcategory = Category.new(category_name="Fiction")[C[1P"Fiction"):"Fiction")
+ => #<Category id: nil, category_name: "Fiction", created_at: nil, updated_at: nil> 
+2.1.0 :004 > category.id
+ => nil 
+2.1.0 :005 > category.save
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "categories" ("category_name", "created_at", "updated_at") VALUES (?, ?, ?)  [["category_name", "Fiction"], ["created_at", "2014-09-05 10:26:59.566703"], ["updated_at", "2014-09-05 10:26:59.566703"]]
+  [1m[36m (144.3ms)[0m  [1mcommit transaction[0m
+ => true 
+2.1.0 :006 > category.s[Kid
+ => 2 
+2.1.0 :007 > category.first
+NoMethodError: undefined method `first' for #<Category:0x000000025a7c40>
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activemodel-4.1.1/lib/active_model/attribute_methods.rb:435:in `method_missing'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activerecord-4.1.1/lib/active_record/attribute_methods.rb:206:in `method_missing'
+	from (irb):7
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/console.rb:90:in `start'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/console.rb:9:in `start'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:69:in `console'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/railties-4.1.1/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `require'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `block in require'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:247:in `require'
+	from /home/valayism/rubytrial/valayism.com/valayism.com/bin/rails:8:in `<top (required)>'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `block in load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:232:in `load_dependency'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/activesupport-4.1.1/lib/active_support/dependencies.rb:241:in `load'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/commands/rails.rb:6:in `call'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/command_wrapper.rb:38:in `call'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:180:in `block in serve'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:153:in `fork'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:153:in `serve'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:128:in `block in run'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:122:in `loop'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application.rb:122:in `run'
+	from /home/valayism/.rvm/gems/ruby-2.1.0/gems/spring-1.1.3/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /home/valayism/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/r

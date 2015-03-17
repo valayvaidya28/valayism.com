@@ -1,0 +1,4 @@
+<%= form_for :categories, {url: {controller: 'categories', action: 'create'}} do |f| %>
+	<%= f.text_field :category_name, placeholder: "Add New category" %>
+	<%= f.submit "Add", method: 'post' %>
+<% end -%>
