@@ -15,7 +15,6 @@ class PostsController < ApplicationController
 		@user_id = @post.user_id
 		@user = User.find_by_id(@user_id)
 		@username = @user.username
-		#logger.info("#{@username} +++++++++++++++++++++++++++++++++=====")
 	end
 
 	def create
@@ -56,13 +55,14 @@ class PostsController < ApplicationController
 	def destroy
 	    @post = Post.find(params[:id])
         if @post.destroy
-            redirect_to '/_dashboard', :notice=> "Your post has been deleted!"
+            redirect_to '/dashboard', :notice=> "Your post has been deleted!"
         end 
 	end
 
 	def upvote
+		@post = Post.find(params[:id])
 		Post.increment_counter(:score, params[:id])
-		redirect_to :controller=>'posts', :action => 'show', :id => params[:id]
+		redirect_to "/posts/#{params[:id]}-#{@post.title.downcase.parameterize}"
 	end
 
 	def category_post
