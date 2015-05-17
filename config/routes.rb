@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   post '/logout', to: 'users#logout', as: 'logout'
   resources :posts
   resources :categories
+  resources :comments
   # Example resource route with options:
   #   resources :products do
   #     member do
