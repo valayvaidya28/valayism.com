@@ -38,7 +38,6 @@ class PostsController < ApplicationController
 		end
 	end
 
-
 	def edit
 		@post = Post.find(params[:id])
 	end
@@ -54,7 +53,8 @@ class PostsController < ApplicationController
 
 	def destroy
 	    @post = Post.find(params[:id])
-        if @post.destroy
+        if @post.present?
+        	@post.delete
             redirect_to '/dashboard', :notice=> "Your post has been deleted!"
         end 
 	end
