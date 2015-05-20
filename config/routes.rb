@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   #   resources :products
   get '/dashboard', to: 'users#dashboard'
   get '/upvote' => "posts#upvote"
+  get '/downvote' => "posts#downvote"
   get '/category/:name', to: 'posts#category_post', as: 'post_with_category'
   get '/user/login', to: 'users#login', as: 'login'
   post '/user/login', to: 'users#check_credentials', as: 'check_credentials'
