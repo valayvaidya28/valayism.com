@@ -11,6 +11,6 @@
 <hr />
 <% @posts.each do |post| %>
 	<h3><%= link_to post.title, post %></h3>
-	<%= post.content %><br>
+	<%= truncate(post.content, :length => 50, :separator => '') %><br>
 	<hr />
 <% end %>
