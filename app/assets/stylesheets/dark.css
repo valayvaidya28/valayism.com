@@ -1,0 +1,10 @@
+/* Dark */
+body,.boxed,.boxed-2 {
+	background-color: #263241;
+}
+#header,.widget,.post-head,.post-wrap,.page-navigation div {
+	-webkit-box-shadow: 0 0 5px 0 #4c5663;
+	-moz-box-shadow: 0 0 5px 0 #4c5663;
+	box-shadow: 0 0 5px 0 #4c5663;
+	border-color: #4b5562;
+}
