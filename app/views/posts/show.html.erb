@@ -4,9 +4,6 @@
 <% @post.categories.each do |c|%>
 	<%= c.category_name %>
 <% end -%>
-<% if not @post.photo.blank? then %>
-	<%= image_tag @post.photo.url(:medium) %><br>
-<% end %>
 <p><%= @post.content %></p>
 <small><%= @post.created_at %></small>
 <br>

@@ -6,8 +6,8 @@ class PostsController < ApplicationController
 	end
 
 	def new
-		@post = Post.new
 		@categories = Category.all
+		@post = Post.new
 	end
 
 	def show
@@ -20,12 +20,12 @@ class PostsController < ApplicationController
 	def create
 		all_params = params
 		@user = User.find_by_username(session[:username])
-		@post = Post.new(:title => all_params[:title], :photo => all_params[:photo], :content=> all_params[:content])
+		@post = Post.new(:title => all_params[:title], :content=> all_params[:content])
 		@user.posts << @post
 		all_params.each do |key, value|
 			if key.start_with?("category")
-			#	category = Category.find_by_category_name(value)
-			#	@post.categories << category
+				category = Category.find_by_category_name(value)
+				@post.categories << category
 				@user.posts << @post
 				@post.save!
 			end
