@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
 
 	def index
-		@posts = Post.all
+		@all_posts = Post.all
+		@posts = @all_posts.sort_by(&:created_at).reverse
 		@categories = Category.all
 	end
 

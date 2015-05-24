@@ -1,4 +1,98 @@
-<% content_for :title do %>Home<% end %>
+<div class="sections">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 main-content">
+				<div class="row blog-all">
+					<% @posts.each do |post| %>
+					<div class="post post-3 col-md-6 post-image">
+						<div class="post-head"><h3><%= link_to post.title, post%></h3>
+							<div class="clearfix"></div>
+						</div><!-- End post-head -->
+						<div class="post-wrap">
+							<div class="post-inner">
+								<p>
+									<%= truncate(post.content, :length => 50, :separator => '') %><br>
+								</p>
+								<div class="clearfix"></div>
+								<div class="post-share-view">
+									<div class="post-meta">
+										<div><i class="fa fa-clock-o"></i><%= time_ago_in_words(post.created_at)%></div>	
+										<%=link_to "Continue Reading", post, :class=>"button post-more" %>
+									</div><!-- End post-meta -->
+								</div><!-- End post-share-view -->
+								<div class="clearfix"></div>
+							</div><!-- End post-inner -->
+						</div><!-- End post-wrap -->
+					</div>
+					<% end %>
+				</div>
+			</div>
+			<div class="col-md-4 sidebar">
+					<div class="widget widget-about">
+						<div class="widget-about-img"><img alt="" src="images/about-img.png"></div>
+						<h3>Valay Vaidya</h3>
+						<p>I have my own theory of everything.</p>
+						<div class="clearfix"></div>
+					</div><!-- End widget -->
+					
+					<div class="widget">
+						<div class="widget-title"><i class="fa fa-folder-open"></i>Categories</div>
+						<div class="widget-categories">
+							<ul>
+								<% @categories.each do |c| %>
+									<li><%= link_to c.category_name, post_with_category_path(name: c.category_name) %></li>
+								<% end %>
+							</ul>
+						</div><!-- End widget-categories -->
+					</div><!-- End widget -->
+					
+					
+					
+					<div class="widget">
+						<div class="widget-title"><i class="fa fa-bolt"></i>Popular Posts</div>
+						<div class="widget-posts">
+							<ul>
+								<li class="widget-posts-image">
+									<div class="widget-posts-content">
+										<a href="single-blog.html">Awesome Image Post.</a>
+										<span><i class="fa fa-clock-o"></i>August 20, 2014</span>
+									</div>
+								</li>
+								<li class="widget-posts-quote">
+									<div class="widget-posts-content">
+										<a href="single-blog.html">Awesome Quote Post.</a>
+										<span><i class="fa fa-clock-o"></i>August 20, 2014</span>
+									</div>
+								</li>
+								<li class="widget-posts-vimeo">
+									<div class="widget-posts-content">
+										<a href="single-blog.html">Awesome Vimeo Post.</a>
+										<span><i class="fa fa-clock-o"></i>August 20, 2014</span>
+									</div>
+								</li>
+								<li class="widget-posts-gallery">
+									<div class="widget-posts-content">
+										<a href="single-blog.html">Awesome Gallery Post.</a>
+										<span><i class="fa fa-clock-o"></i>August 20, 2014</span>
+									</div>
+								</li>
+							</ul>
+						</div><!-- End widget-posts -->
+					</div><!-- End widget -->
+					
+					
+					<div class="widget">
+						<div class="widget-title"><i class="fa fa-twitter"></i>Latest Tweets<a class="twitter-follow" href="index-7.html#">Follow</a></div>
+						<div class="widget-twitter"></div>
+					</div><!-- End widget -->
+					
+					
+				</div>
+		</div>
+	</div>
+</div>
+
+<!--<% content_for :title do %>Home<% end %>
 <hr />
 <% @categories.each do |c| %>
 	<%= link_to c.category_name, post_with_category_path(name: c.category_name) %><br>
@@ -8,4 +102,4 @@
 	<h3><%= link_to post.title, post %></h3>
 	<%= truncate(post.content, :length => 50, :separator => '') %><br>
 	<hr />
-<% end %>
+<% end %> -->
