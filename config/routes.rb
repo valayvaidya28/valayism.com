@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get '/user/login', to: 'users#login', as: 'login'
   post '/user/login', to: 'users#check_credentials', as: 'check_credentials'
   post '/logout', to: 'users#logout', as: 'logout'
+  get '/logout', to: 'users#logout', as: 'logged_out'
   resources :posts
   resources :categories
   resources :comments
