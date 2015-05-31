@@ -17,12 +17,12 @@
 	<link rel="stylesheet" href="../assets/responsive.css">
 	<!-- Favicons -->
 	<link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="../assets/base.css">
+	<!-- <link rel="stylesheet" type="text/css" href="../assets/base.css">
 	<link rel="stylesheet" type="text/css" href="../assets/lists.css">
 	<link rel="stylesheet" type="text/css" href="../assets/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../assets/css/fontello.css">
 	<link rel="stylesheet" type="text/css" href="../assets/prettyPhoto.css">
-	<link rel="stylesheet" type="text/css" href="../assets/animate-custom.css">
+	<link rel="stylesheet" type="text/css" href="../assets/animate-custom.css"> -->
 
 </head>
 <body class="body-boxed-2">
@@ -37,7 +37,7 @@
 	</div><!-- End wrap-search -->
 	<header id="header">
 		<div class="container clearfix">
-			<div class="logo"><a href="index.html">Valayism</a></div><!-- End logo -->
+			<div class="logo"><%= link_to "Valayism" ,posts_path%></div><!-- End logo -->
 			<div class="header-follow">
 				<% if session[:username].nil? %>
 					<div class="header-follow-a">Follow Me</div>
@@ -93,6 +93,8 @@
 <%= javascript_include_tag "jquery.min.js"%>
 <%= javascript_include_tag "html5.js"%>
 <%= javascript_include_tag "jquery.nicescroll.min.js"%>
+<%= javascript_include_tag "modernizr.js"%>
+<%= javascript_include_tag "jquery.isotope.min.js"%>
 <%= javascript_include_tag "tabs.js"%>
 <%= javascript_include_tag "jquery.prettyPhoto.js"%>
 <%= javascript_include_tag "jquery.bxslider.min.js"%>
@@ -100,7 +102,6 @@
 <%= javascript_include_tag "jflickrfeed.min.js"%>
 <%= javascript_include_tag "jquery.jribbble-1.0.1.ugly.js"%>
 <%= javascript_include_tag "custom.js"%>
-
 
 
 <!-- End js -->

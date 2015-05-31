@@ -1,14 +1,88 @@
-<% content_for :title do %> <%=@post.title%><% end %>
-<h2><%= @post.title %></h2>
-<% @post.categories.each do |c|%>
-	<%= c.category_name %>
-<% end -%>
-<p><%= @post.content %></p>
-<small><%= @post.created_at %></small>
-<br>
-Authored by: <%=@username%><br>
+
+<div class="sections">
+			<div class="sections">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 main-content">
+					<div class="post post-2 post-gallery single-post">
+						<div class="post-head"><h3><%= @post.title %>.</h3>
+							<div class="post-meta">
+								<div><i class="fa fa-clock-o"></i><%= @post.created_at.to_time.strftime('%B %e')%></div>	
+								<div><i class="fa fa-heart"></i><a href="single-blog.html#"><%= @post.score %></a></div>
+							</div><!-- End post-meta -->
+							<div class="clearfix"></div>
+						</div><!-- End post-head -->
+						<div class="post-wrap">
+							<div class="post-inner">
+								<%= @post.content %>
+								<div class="clearfix"></div>
+										<div class="post-meta">
+											<div class="post-meta-share">
+												<i class="fa fa-share-alt"></i>
+												<a href="#">Share This</a>
+												<div class="share-social">
+													<ul>
+														<li class="social-facebook"><a href="http://www.facebook.com/sharer.php?u=<%=post_url(@post)%>"><i class="fa fa-facebook"></i></a></li>
+														<li class="social-twitter"> <a href="http://twitter.com/home?status=<%=@post.title%> <%=post_url(@post)%> by @Valayism "><i class="fa fa-twitter"></i></a></li>
+													</ul>
+													<i class="fa fa-caret-down"></i>
+												</div><!-- End follow-social -->
+
+											</div>
+											<div style="margin-left:2%"><i class="fa fa-thumbs-up" style="margin-left:10px"></i><a href=""></a></div>
+										</div><!-- End post-meta -->
+									<div class="clearfix"></div>
+							</div>
+
+						</div><!-- End post-wrap -->
+					</div><!-- End post -->
+					<div class="height_20"></div>
+				
+				</div><!-- End main-content -->
+				<div class="col-md-4 sidebar">
+					<div class="widget widget-about">
+						<div class="widget-about-img"><img alt="" src="images/about-img.png"></div>
+						<h3>Valay Vaidya</h3>
+						<p>I have my own theory of everything.</p>
+						<div class="clearfix"></div>
+					</div><!-- End widget -->
+					
+					<div class="widget">
+						<div class="widget-title"><i class="fa fa-folder-open"></i>Categories</div>
+						<div class="widget-categories">
+							<ul>
+								<% @categories.each do |c| %>
+									<li><%= link_to c.category_name, post_with_category_path(name: c.category_name) %></li>
+								<% end %>
+							</ul>
+						</div><!-- End widget-categories -->
+					</div><!-- End widget -->
+					<div class="widget">
+						<div class="widget-title"><i class="fa fa-bolt"></i>Recent Posts</div>
+						<div class="widget-posts">
+							<ul>
+								<li class="widget-posts-image">
+									<% @recent_posts.each do |post| %> 
+										<div class="widget-posts-content">
+											<%= link_to post.title, post%>
+											<span><i class="fa fa-clock-o"></i><%= post.created_at.to_time.strftime('%B %e') %></span>
+										</div>
+									<% end %>
+								</li>
+							</ul>
+						</div><!-- End widget-posts -->
+					</div><!-- End widget -->
+					<div class="widget">
+						<div class="widget-title"><i class="fa fa-twitter"></i>Latest Tweets<a class="twitter-follow" href="index-7.html#">Follow</a></div>
+						<div class="widget-twitter"></div>
+					</div><!-- End widget -->
+					
+					
+				</div>
+			</div><!-- End row -->
+		</div><!-- End container -->
+	</div>
+</div>
 <div id="upvote-button">
 	<%= link_to "upvote",  upvote_path(:id => @post.id), remote: true, id: "upvote_post" %> <%= @post.score%>
 </div>
-<%= link_to "tweet", "http://twitter.com/home?status=#{@post.title} #{post_url(@post)} " + "via @Valayism"%>
-<%= link_to "facebook", "http://www.facebook.com/sharer.php?u=#{post_url(@post)}" %>

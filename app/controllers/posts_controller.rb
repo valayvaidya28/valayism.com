@@ -13,6 +13,8 @@ class PostsController < ApplicationController
 
 	def show
 		@post = Post.find(params[:id])
+		@recent_posts = Post.last(5)
+		@categories = Category.all
 		@user_id = @post.user_id
 		@user = User.find_by_id(@user_id)
 		@username = @user.username
