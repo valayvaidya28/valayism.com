@@ -16,7 +16,8 @@
 								<div class="clearfix"></div>
 								<div class="post-share-view">
 									<div class="post-meta">
-										<div><i class="fa fa-clock-o"></i><%= time_ago_in_words(post.created_at)%></div>	
+										
+										<div><i class="fa fa-clock-o"></i><%= post.created_at.to_time.strftime('%B %e')%></div>	
 										<%=link_to "Continue Reading", post, :class=>"button post-more" %>
 									</div><!-- End post-meta -->
 								</div><!-- End post-share-view -->

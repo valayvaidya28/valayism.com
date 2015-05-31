@@ -13,10 +13,6 @@ class CategoriesController < ApplicationController
 		if @category.save
 			flash[:success] = "Category has been added."
 			redirect_to new_post_path
-			# respond_to do |format|
-			# 	# format.html { redirect_to posts_path }
-			# 	format.js
-			# end
 		else
 			redirect_to posts_path
 		end
