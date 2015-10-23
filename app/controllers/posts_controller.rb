@@ -7,6 +7,7 @@ class PostsController < ApplicationController
 	end
 
 	def new
+		render :layout => false
 		@categories = Category.all
 		@post = Post.new
 	end
@@ -51,7 +52,7 @@ class PostsController < ApplicationController
             redirect_to posts_path, :notice=>"Your post is updated!"
 	    else
             render "edit"
-        end 
+        end
     end
 
 	def destroy
@@ -59,7 +60,7 @@ class PostsController < ApplicationController
         if @post.present?
         	@post.delete
             redirect_to '/dashboard', :notice=> "Your post has been deleted!"
-        end 
+        end
 	end
 
 	def upvote

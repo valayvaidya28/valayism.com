@@ -11,13 +11,14 @@
 						<div class="post-wrap">
 							<div class="post-inner">
 								<p>
-									<%= truncate(post.content, :length => 50, :separator => '') %><br>
+									<% @str = raw truncate(post.content, :length => 50, :separator => '') %>
+									<%= @str %> <br>
 								</p>
 								<div class="clearfix"></div>
 								<div class="post-share-view">
 									<div class="post-meta">
-										
-										<div><i class="fa fa-clock-o"></i><%= post.created_at.to_time.strftime('%B %e')%></div>	
+
+										<div><i class="fa fa-clock-o"></i><%= post.created_at.to_time.strftime('%B %e')%></div>
 										<%=link_to "Continue Reading", post, :class=>"button post-more" %>
 									</div><!-- End post-meta -->
 								</div><!-- End post-share-view -->
@@ -35,7 +36,7 @@
 						<p>I have my own theory of everything.</p>
 						<div class="clearfix"></div>
 					</div><!-- End widget -->
-					
+
 					<div class="widget">
 						<div class="widget-title"><i class="fa fa-folder-open"></i>Categories</div>
 						<div class="widget-categories">
@@ -46,9 +47,9 @@
 							</ul>
 						</div><!-- End widget-categories -->
 					</div><!-- End widget -->
-					
-					
-					
+
+
+
 					<div class="widget">
 						<div class="widget-title"><i class="fa fa-bolt"></i>Popular Posts</div>
 						<div class="widget-posts">
@@ -80,14 +81,14 @@
 							</ul>
 						</div><!-- End widget-posts -->
 					</div><!-- End widget -->
-					
-					
+
+
 					<div class="widget">
 						<div class="widget-title"><i class="fa fa-twitter"></i>Latest Tweets<a class="twitter-follow" href="index-7.html#">Follow</a></div>
 						<div class="widget-twitter"></div>
 					</div><!-- End widget -->
-					
-					
+
+
 				</div>
 		</div>
 	</div>

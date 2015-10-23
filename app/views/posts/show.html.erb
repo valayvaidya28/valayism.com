@@ -7,14 +7,14 @@
 					<div class="post post-2 post-gallery single-post">
 						<div class="post-head"><h3><%= @post.title %>.</h3>
 							<div class="post-meta">
-								<div><i class="fa fa-clock-o"></i><%= @post.created_at.to_time.strftime('%B %e')%></div>	
+								<div><i class="fa fa-clock-o"></i><%= @post.created_at.to_time.strftime('%B %e')%></div>
 								<div><i class="fa fa-heart"></i><a href="single-blog.html#"><%= @post.score %></a></div>
 							</div><!-- End post-meta -->
 							<div class="clearfix"></div>
 						</div><!-- End post-head -->
 						<div class="post-wrap">
 							<div class="post-inner">
-								<%= @post.content %>
+								<%= raw @post.content %>
 								<div class="clearfix"></div>
 										<div class="post-meta">
 											<div class="post-meta-share">
@@ -37,7 +37,7 @@
 						</div><!-- End post-wrap -->
 					</div><!-- End post -->
 					<div class="height_20"></div>
-				
+
 				</div><!-- End main-content -->
 				<div class="col-md-4 sidebar">
 					<div class="widget widget-about">
@@ -46,7 +46,7 @@
 						<p>I have my own theory of everything.</p>
 						<div class="clearfix"></div>
 					</div><!-- End widget -->
-					
+
 					<div class="widget">
 						<div class="widget-title"><i class="fa fa-folder-open"></i>Categories</div>
 						<div class="widget-categories">
@@ -62,7 +62,7 @@
 						<div class="widget-posts">
 							<ul>
 								<li class="widget-posts-image">
-									<% @recent_posts.each do |post| %> 
+									<% @recent_posts.each do |post| %>
 										<div class="widget-posts-content">
 											<%= link_to post.title, post%>
 											<span><i class="fa fa-clock-o"></i><%= post.created_at.to_time.strftime('%B %e') %></span>
@@ -76,8 +76,8 @@
 						<div class="widget-title"><i class="fa fa-twitter"></i>Latest Tweets<a class="twitter-follow" href="index-7.html#">Follow</a></div>
 						<div class="widget-twitter"></div>
 					</div><!-- End widget -->
-					
-					
+
+
 				</div>
 			</div><!-- End row -->
 		</div><!-- End container -->
