@@ -59,7 +59,7 @@ class PostsController < ApplicationController
 	def destroy
 	    @post = Post.find(params[:id])
         if @post.present?
-        	@post.destroy
+        	@post.delete
             redirect_to '/dashboard', :notice=> "Your post has been deleted!"
         end
 	end

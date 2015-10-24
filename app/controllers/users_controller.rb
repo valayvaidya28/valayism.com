@@ -8,8 +8,8 @@ class UsersController < ApplicationController
 		else
 			user = User.find_by_username(session[:username])
 			@posts = user.posts.sort_by(&:created_at).reverse
+			render :layout => false
 		end
-		render :layout => false
 	end
 
 	def login
@@ -35,7 +35,7 @@ class UsersController < ApplicationController
 
 	def logout
 		session[:username] = nil;
-		redirect_to '/dashboard'
+		redirect_to '/posts'
 	end
 
 end

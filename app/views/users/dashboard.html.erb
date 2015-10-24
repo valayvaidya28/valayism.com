@@ -32,7 +32,7 @@
     <div class="wrapper">
       <header class="main-header">
         <!-- Logo -->
-        <a href="../../index2.html" class="logo">
+        <a href="/posts" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>V</b></span>
           <!-- logo for regular state and mobile devices -->
@@ -128,7 +128,7 @@
                     </div>
                     <div class="timeline-footer">
 												<%= link_to "Edit", edit_post_path(post), :class=>"btn btn-primary btn-xs" %>
-												<%= link_to "Delete", "posts/#{post.id}", method: :delete , :confirm=>"Are you sure?", :class=>"btn btn-danger btn-xs"%>
+												<%= button_to "Delete", "posts/#{post.id}", method: :delete , :confirm=>"Are you sure?", :class=>"btn btn-danger btn-xs"%>
 										</div>
                   </div>
                 </li>
