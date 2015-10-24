@@ -1,18 +1,19 @@
 class UsersController < ApplicationController
 
 	before_action :login, only: [:dashboard]
-	
+
 	def dashboard
 		if session[:username].nil?
 			redirect_to '/user/login'
 		else
 			user = User.find_by_username(session[:username])
-			@posts = user.posts
+			@posts = user.posts.sort_by(&:created_at).reverse
 		end
+		render :layout => false
 	end
 
 	def login
-		
+
 	end
 
 	def check_credentials
@@ -36,5 +37,5 @@ class UsersController < ApplicationController
 		session[:username] = nil;
 		redirect_to '/dashboard'
 	end
-	
+
 end
