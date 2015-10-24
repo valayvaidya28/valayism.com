@@ -11,8 +11,7 @@
 						<div class="post-wrap">
 							<div class="post-inner">
 								<p>
-									<% @str = raw truncate(post.content, :length => 50, :separator => '') %>
-									<%= @str %> <br>
+									<%= raw post.content.truncate(200) %><br>
 								</p>
 								<div class="clearfix"></div>
 								<div class="post-share-view">
